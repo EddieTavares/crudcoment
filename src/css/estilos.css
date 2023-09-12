@@ -1,0 +1,201 @@
+html{
+    background: rgb(2, 1, 50);
+    /* display: block; */
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 95%;
+    margin: auto;
+}
+
+#container {
+    display: grid;
+    font-family: Arial, sans-serif;
+    grid-gap: 0.3rem;
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav "
+        "main main main aside"
+        "footer footer footer footer";
+    grid-template-columns: auto auto auto 28%;
+    grid-template-rows: auto 5vh auto auto 10vh;
+}
+
+#container header{
+    grid-area: header;
+    font-size: 1em;
+    text-align: center;
+    background: radial-gradient(circle,  rgb(53, 3, 65) 0%, rgb(4, 4, 61) 35%, rgba(2,0,50,1) 100%);
+    color: #FDFDFD;
+}
+#container header h1{
+    margin-bottom: 20px;
+}
+
+#container aside {
+    grid-area: aside;
+    /* width: 20rem; */
+
+    background-color: rgb(0, 66, 66);
+    border: 2px solid red;
+    display: block;
+    padding: 1em;
+    border-radius: 0.4em ;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#container aside img{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 1px 18px #36855b;
+    transition-property: width, height;
+    transition: width 2s, heigth .3s;
+} 
+
+#container footer {
+    grid-area: footer;
+    padding: 1rem;
+}
+
+#container *{
+    /* background: rgb(48, 48, 48); */
+    /* color: #FDFDFD; */
+}
+
+#container nav {
+    grid-area: nav;
+    background-color: rgb(0, 66, 66);
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 0.4em ;
+}
+
+#container nav a{
+    text-decoration: none;            
+    font-size: 1.2em;
+    padding: 0 2em;
+    transition-duration: 0.6s;
+    color: #FDFDFD;
+}      
+
+#container nav a:hover{
+    text-decoration: underline;            
+    font-size: 1.4em;
+    padding: 1em 2em;
+}      
+  
+#container main {
+    grid-area: main;
+    /* border: 1px solid white; */
+    margin: 0.7rem;
+}
+#container main h2{
+    text-align: center;
+}
+
+#container main p{
+    /* text-decoration: none;             */
+    font-size: 1em;
+    padding: 0 20px 0 20px;
+    color: var(red);
+    display: flex;
+}        
+
+#container main img{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 1px 18px #36855b;
+    transition-property: width, height;
+    transition: width 2s, heigth .3s;
+}  
+#container main img:hover{
+    width: 73%;
+    height: auto;
+}  
+#container main iframe{
+    width: 28em; 
+    height: 21em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+#container footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container footer div a img{
+    width: 5em;
+    height: 100%;
+}
+#container footer div a img:hover{
+    opacity: 1;
+}
+
+#container footer hr {
+	border-top: 3px solid rgb(253, 253, 253);
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #container {
+        /* display: grid;
+        font-family: Arial, sans-serif;
+        grid-gap: 0.3rem; */
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: auto;
+        grid-template-rows: auto 5vh auto auto 10vh;
+    }
+ 
+    #container nav {
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        /* padding: 1em; */
+        width: auto;
+        border-radius: 0.4em ;
+    }    
+
+    #container nav a{
+        font-size: 1em;
+        padding: 0 0.7em;
+    }      
+  
+
+    #container nav a:hover{
+        text-decoration: underline;            
+        font-size: 1.1em;
+        padding: 1em 2em;
+    }        
+    
+    #container aside {
+        width: auto;
+        padding: 1em;
+        margin: 1em;
+    }
+
+    #container main iframe{
+        width: 70%; 
+        height: auto;
+    }             
+}
